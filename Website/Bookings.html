@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+            background-color:rgb(35, 35, 35);
+            color: rgb(255, 255, 255);
+        }
+
+        h2 {
+            font-size: 200%;
+            color: rgb(255, 255, 255);
+        }
+
+        p {
+            font-size: 200%;
+            color: rgb(255, 255, 255);
+        }
+
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: rgb(60, 156, 255);
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            font-size: 150%;
+        }
+
+            .sidebar a {
+                display: block;
+                color: black;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+                .sidebar a.active {
+                    background-color: rgb(30, 90, 180);
+                    color: white;
+                    font-size: 125%;
+                }
+
+                .sidebar a:hover:not(.active) {
+                    background-color: #1364B3;
+                    color: white;
+                }
+
+        div.content {
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .sidebar {
+                width: 200%;
+                height: auto;
+                position: relative;
+            }
+
+                .sidebar a {
+                    float: left;
+                }
+
+            div.content {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="Homepage.html">Venue</a>
+		<a class="active" a href="#bookings"><img src="../images/icon-transparent.png" alt="Icon Transparent" width="140" height="140"><br><br>Bookings</a>
+        <a href="Clients.html">Clients</a>
+        <a href="Documents.html">Documents</a>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+
+		<script src="../js/firebase.js"></script>
+
+        <center>
+        <input id="signOut" style=font-size:110% type="button" value="Sign Out" onclick="signOut();" />
+        </center>
+
+    </div>
+
+    <div class="content">
+        <center>
+            <h2>MusicMatters Bookings</h2>
+            <p>Bookings will go here</p>
+        </center>
+    </div>
+
+
+
+</body>
+</html>
