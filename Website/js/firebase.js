@@ -47,7 +47,7 @@ var firebaseConfig = {
 	function signOut() {
 	firebase.auth().signOut().then(() => {
 		alert("You have been signed out");
-		window.location.href="../Login.html"
+		window.location.href="Login.html"
 	  }).catch((error) => {
 		alert("This is a bug. Screenshot this and send it to team 6")
 	  })
