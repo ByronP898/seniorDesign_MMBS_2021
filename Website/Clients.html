@@ -9,7 +9,13 @@
 		
 	<!-- CSS -->
 		<link href="css/clients.css" rel="stylesheet" type="text/css">
-	
+		
+	<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+		<script type="text/JavaScript" src="js/firebase.js"></script>
+		
 </head>
 <body>
 	
@@ -27,17 +33,32 @@
     </div>
 	<!-- Nav Bar -->
 	
-    <div class="content">
-        <center>
-            <h2>MusicMatters Clients</h2>
-            <p>Clients will go here</p>
-        </center>
-    </div>
+    <div class="row">
 	
-	<!-- Scripts -->
-		<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+        <div class="column">
+            <h2> Add Client: </h2>
+			
+			<label for="email">Email: </label>
+            <input type="email" id="cliEmail" required><br/>
+			
+			<label for="stage">Stage Name: </label>
+			<input type="text" id="stage" required><br/>
+			
+			<!-- For some reason the "yes" and "no" are white like the background??? -->
+			<label for="splitCheck">Duo, split the check: </label>
+			<lable for="splitCheckYes"> Yes </lable>
+			<input type="radio" id="splitCheckYes" name="splitCheck" value="true">
+			<lable for="splitCheckNo"> No </lable>
+			<input type="radio" id="splitCheckNo" name="splitCheck" value="false"><br/>
+			
+			<label for="performers"> Performers: </label><br/>
+			<input type="text" id="performers1" name="performers" required><br/>
+			<input type="text" id="performers2" name="performers"><br/>
+			<input type="text" id="performers3" name="performers"><br/>	
+			
+			<br/><button onclick="cliAdd()" id="submit"> Submit </button>
+		</div>
+    </div>
 
-		<script src="../js/firebase.js"></script>
 </body>
 </html>

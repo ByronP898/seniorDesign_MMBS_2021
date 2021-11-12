@@ -2,25 +2,40 @@
 /* Hompage.css */
 /* CSS Document for Music Matters Booking Web App */
 /* Author(s): Byron Prather 
- * Version: 9/8/2021
+ * Version: 11/5/2021
  */
 
-body {
+		body {
             margin: 0;
             font-family: "Lato", sans-serif;
-            background-color:rgb(35, 35, 35);
-            color: rgb(255, 255, 255);
+            /*background-color:rgb(35, 35, 35);*/
+            color: #FFFFFF;
         }
 
         h2 {
             font-size: 200%;
-            color: rgb(255, 255, 255);
+            color: #000000;
         }
+		
+		h4 {
+			font-size: 125%;
+			color: #000000; 
+		}
 
         p {
             font-size: 200%;
-            color: rgb(255, 255, 255);
+            color: #000000;
         }
+
+		label {
+			font-size: 125%;
+			color: #000000;
+		}
+
+		input {
+			font-size: 125%;
+		}
+
 
         .sidebar {
             margin: 0;
@@ -51,11 +66,27 @@ body {
                     color: white;
                 }
 
-        div.content {
-            margin-left: 200px;
-            padding: 1px 16px;
-            height: 1000px;
+        div.column {
+			float: left;
+			width: 50%;
+			margin-left: 250px;
+            padding: 20px;
+            height: 200px;
         }
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		div.rightbar {
+			
+			margin: 300px;
+			padding: 1px 16px;
+			width: 300px;
+
+		}
 
         @media screen and (max-width: 1000px) {
             .sidebar {
